@@ -1,0 +1,15 @@
+.btn { /* default buytton style */ 
+    width: 75px;
+    height: 25px;
+    outline: none;
+    background: white;
+    font-size: 13px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 3px black; /* offset-x | offset-y | blur-radius | color */
+    background:#e6e6e6;  
+}
