@@ -1,0 +1,19 @@
+.pokemon-type {
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 20px;
+    color: black;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+.pokemon-type p {
+    margin-bottom: 2px;
+}
+
+.grass {
+    background: green;
+}

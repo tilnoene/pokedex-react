@@ -13,11 +13,11 @@ header#main-header:first-child {
     padding-left: 25px;
 }
 
-header#main-header:last-child {
+header#main-header:nth-child(1) {
     padding-right: 25px;
 }
 
-header#main-header h1 { /* */
+header#main-header h1 {
     font-size: 16px;
     justify-content: right;
 }

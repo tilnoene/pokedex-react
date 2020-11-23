@@ -1,0 +1,21 @@
+.PokemonCard {
+    width: 170px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px black; /* offset-x | offset-y | blur-radius | color */
+    cursor: pointer;
+}
+
+.PokemonCard:hover {
+    border: solid 2px  #e60000;
+}
+
+.PokemonCardTypes {
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+}
