@@ -3,12 +3,22 @@ import PokemonType from '../PokemonType';
 
 import style from './styles.css';
 
-const PokemonCard = ({ title="a", styles="btn" }) => {
+function converteID(id) {
+  if(id < 10) return `00${id}`;
+  if(id < 100) return `0${id}`;
+  return `${id}`;
+}
+
+const PokemonCard = ({ pokemons }) => {
     return (
-      <div className="PokemonCard">
-        foto
-        <p>nome</p>
-        <div className="PokemonCardTypes"><PokemonType /><PokemonType /></div>
+      <div className="ContainerPokemonCard">
+        {pokemons.map((pokemon) => (
+        <div key={pokemon.id} className="PokemonCard">
+          <img src={pokemon.image_url}/>
+          <p>{pokemon.name} # {converteID(pokemon.number)}</p>
+          <p>{pokemon.kind}</p>
+        </div>
+      ))}
       </div>
     );
 };

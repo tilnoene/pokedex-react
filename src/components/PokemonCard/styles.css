@@ -1,4 +1,12 @@
+.ContainerPokemonCard {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .PokemonCard {
+    margin: 10px;
     width: 170px;
     height: 160px;
     display: flex;
