@@ -16,7 +16,11 @@ const PokemonCard = ({ pokemons }) => {
         <div key={pokemon.id} className="PokemonCard">
           <img src={pokemon.image_url}/>
           <p>{pokemon.name} # {converteID(pokemon.number)}</p>
-          <p>{pokemon.kind}</p>
+          <div className="PokemonCardTypes">
+            {pokemon.kind.split(';').map((type, index) => (
+              <PokemonType key={index} type={type}/>
+            ))}
+          </div>
         </div>
       ))}
       </div>

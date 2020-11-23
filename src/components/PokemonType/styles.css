@@ -3,17 +3,83 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
+    width: 50px;
     height: 20px;
-    color: black;
     font-size: 13px;
     border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    margin: 0 2px;
 }
 
 .pokemon-type p {
     margin-bottom: 2px;
 }
 
+.bug {
+    background: #7ED578;
+}
+
+.electric {
+    background: #FFF34B;
+}
+
+.fairy {
+    background: #FF7EE5;
+}
+
+.fighting {
+    background: #F17373;
+}
+
+.fire {
+    background: #FFB433;
+}
+
+.flying {
+    background: #D7F1E9;
+}
+
+.ghost {
+    background: #E2E2E2;
+}
+
 .grass {
-    background: green;
+    background: #5EFF53;
+}
+
+.ground {
+    background: #AA8546;
+}
+
+.ice {
+    background: #AEE3FB;
+}
+
+.normal {
+    background: #D7DBA8;
+}
+
+.poison {
+    background: #CE52F9;
+}
+
+.psychic {
+    background: #FFC157;
+}
+
+.rock {
+    background: #757575;
+}
+
+.steel {
+    background: #A1A1A1;
+}
+
+.water {
+    background: #7192FF;
+}
+
+.dragon {
+    background: #43372D;
 }

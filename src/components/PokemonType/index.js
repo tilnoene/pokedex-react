@@ -2,9 +2,9 @@ import React from 'react';
 
 import style from './styles.css';
 
-const PokemonType = ({ title="a", styles="btn" }) => {
+const PokemonType = ({ type }) => {
     return (
-      <div className="pokemon-type grass"><p>grass</p></div>
+      <div className={`pokemon-type ${type}`}><p>{type}</p></div>
     );
 };
 
