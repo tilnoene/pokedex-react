@@ -1,12 +1,12 @@
 import React from 'react';
-import Button from '../Button';
+import { NavLink } from "react-router-dom";
 
 import './styles.css';
 
 const Header = () => (
     <header id="main-header">
-        <h1>Focadex</h1>
-        <Button title={"Perfil"}/>
+        <NavLink to="/" activeClassName="selected">Focadex</NavLink>
+        <NavLink to="/perfil" className="btn">Perfil</NavLink>
     </header>
 );
 
