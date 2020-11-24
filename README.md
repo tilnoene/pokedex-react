@@ -1,6 +1,5 @@
 Pokédex em ReactJS
 
-newfocadex.netlify.app/
+https://newfocadex.netlify.app/
 
-Victor Manuel
-Luan Castro
+Victor Manuel e Luan Castro
