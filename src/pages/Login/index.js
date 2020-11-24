@@ -10,11 +10,20 @@ export default function Login() {
     const history = useHistory();
 
     const handleLogin = (event) => {
-      event.preventDefault();
-      history.push('/pokemon');
+        event.preventDefault();
 
-      localStorage.setItem("current_username", username);
-      localStorage.setItem(username, "null");
+        if(username == null){
+            alert('Insira um nome válido!')
+        } else{
+            history.push('/pokemon');
+
+            localStorage.setItem("current_username", username);
+            const current_data = localStorage.getItem(username);
+            
+            if(current_data == null){
+                localStorage.setItem(username, "null");
+            }
+        } 
     };
   
     return (
