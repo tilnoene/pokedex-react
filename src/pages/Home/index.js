@@ -4,14 +4,14 @@ import PokemonList from '../../components/PokemonList';
 
 import style from './styles.css';
 
-const Home = ({ type }) => {
+const Home = ({ page=1 }) => {
     return (
         <div>
-            <MainMenu />
+            <MainMenu page={page} />
             <div className="home">
-                <PokemonList />
+                <PokemonList pageRef={page} />
             </div>
-            <MainMenu />
+            <MainMenu page={page} />
         </div>
     );
 };

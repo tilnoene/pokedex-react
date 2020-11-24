@@ -11,7 +11,6 @@ const PokemonCard = ({ pokemons }) => {
       <div className="ContainerPokemonCard">
         {pokemons.map((pokemon) => (
         <NavLink to={{ pathname: `/pokemon/${pokemon.name}`, pokemon: pokemon }} key={pokemon.id} className="PokemonCard">
-
           <img src={pokemon.image_url}/>
           <p>{pokemon.name} # {converteID(pokemon.number)}</p>
           <div className="PokemonCardTypes">

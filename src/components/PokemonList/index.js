@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import PokemonCard from '../PokemonCard';
 import axios from 'axios';
 
-export default function PokemonList( {pageRef=5} ) {
+export default function PokemonList( {pageRef=1} ) {
     const [pokemons, setPokemons] = useState([]);
     const [page, setPage] = useState(pageRef);
 
