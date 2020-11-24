@@ -1,6 +1,6 @@
 import React from 'react';
 import MainMenu from '../../components/MainMenu';
-import Pokemons from '../Pokemons';
+import PokemonList from '../../components/PokemonList';
 
 import style from './styles.css';
 
@@ -8,8 +8,8 @@ const Home = ({ type }) => {
     return (
         <div>
             <MainMenu />
-            <div class="home">
-                <Pokemons />
+            <div className="home">
+                <PokemonList />
             </div>
             <MainMenu />
         </div>
