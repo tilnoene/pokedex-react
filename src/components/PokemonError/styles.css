@@ -1,0 +1,13 @@
+.containerError {
+    min-height: 83.7vh; /* meida query please mobile, pc meu, pc grande -> 91vh*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.containerError p, h1 {
+    margin: 5px;
+}
+

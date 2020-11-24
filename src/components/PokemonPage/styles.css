@@ -1,0 +1,29 @@
+.ContainerPokemonPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #333;
+}
+
+.PokemonPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.PokemonPage img {
+    width: 200px;
+    height: 200px;
+}
+
+.PokemonPageTypes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+}
