@@ -41,7 +41,7 @@
 }
 
 .ghost {
-    background: #E2E2E2;
+    background: #A292BC;
 }
 
 .grass {
@@ -82,4 +82,5 @@
 
 .dragon {
     background: #43372D;
+    color: white;
 }
