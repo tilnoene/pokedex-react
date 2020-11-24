@@ -8,7 +8,7 @@ import './styles.css';
 const Profile = () => {
     const username = localStorage.getItem("current_username");
     const data = localStorage.getItem(username);
-    console.log(username);
+    
     return (
         <div className="container-profile">
             <div>
