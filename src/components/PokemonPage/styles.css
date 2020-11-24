@@ -31,6 +31,9 @@
     margin: 10px 0 20px 0;
 }
 
-.btn-back {
-    margin: 20px 0 0 20px;
+.container-btn-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 }

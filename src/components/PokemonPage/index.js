@@ -3,13 +3,15 @@ import { NavLink } from 'react-router-dom';
 
 import PokemonType from '../PokemonType';
 import Button from '../Button';
-import {converteID} from '../functions.js';
+import { converteID } from '../functions';
 
 import './styles.css';
 
 const PokemonPage = ({ pokemon }) => (
     <div>
-        <NavLink to="/pokemon/" className="btn btn-back" >Voltar</NavLink> 
+        <div className="container-btn-back">
+            <NavLink to="/pokemon" className="btn" >Voltar</NavLink> 
+        </div>
         <div className="ContainerPokemonPage">
             <div className="PokemonPage">
                 <img src={pokemon.image_url} />
@@ -20,7 +22,19 @@ const PokemonPage = ({ pokemon }) => (
                     <PokemonType key={index} type={type}/>
                     ))}
                 </div>
-                <Button title="Favoritar" />
+                <Button title="Favoritar" onClick={() => { 
+                    const username = localStorage.getItem("current_username");
+                    const data = localStorage.getItem(username);
+
+                    if(data === "null"){
+                        localStorage.setItem(username, JSON.stringify([pokemon]));
+                    } else{
+                        const oldData = JSON.parse(data);
+                        localStorage.setItem(username, JSON.stringify([...oldData, pokemon]));
+                    }
+                    // mudar botao para remover...
+                    
+                }}/>
             </div>
         </div>
     </div>

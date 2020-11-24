@@ -5,7 +5,7 @@ import './styles.css';
 
 const Header = () => (
     <header id="main-header">
-        <NavLink to="/" activeClassName="selected">Focadex</NavLink>
+        <h1>Focadex</h1>
         <NavLink to="/perfil" className="btn">Perfil</NavLink>
     </header>
 );

@@ -26,7 +26,7 @@ function App() {
         <Route path="/perfil" exact>
           <Profile />
         </Route>
-        <Route exact path="/pokemon/:name">
+        <Route path="/pokemon/:name" exact>
           <PokemonInfo />
         </Route>
       </main>

@@ -4,7 +4,7 @@ import axios from 'axios';
 import PokemonList from '../../components/PokemonList';
 import Button from '../../components/Button';
 
-import style from './styles.css';
+import './styles.css';
 
 const Home = ({ pageRef=1 }) => {
     const [pokemons, setPokemons] = useState([]);
@@ -47,10 +47,9 @@ const Home = ({ pageRef=1 }) => {
         }
     }
 
-    //main com o nome, os dois botoes, tudo dentro de um bgulho estilziado com space-evenly
     return (
         <div>
-            <div class="main-menu">
+            <div className="main-menu">
                 <Button title="<" onClick={() => { prevPage( page ) }} />
                 <p>{page} / {totalPages}</p>
                 <Button title=">" onClick={() => { nextPage( page ) }} />
@@ -60,7 +59,7 @@ const Home = ({ pageRef=1 }) => {
                 <PokemonList pokemons={pokemons} />
             </div>
 
-            <div class="main-menu">
+            <div className="main-menu">
                 <Button title="<" onClick={() => { prevPage( page ) }} />
                 <p>{page} / {totalPages}</p>
                 <Button title=">" onClick={() => { nextPage( page ) }} />
