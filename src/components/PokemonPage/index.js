@@ -13,7 +13,7 @@ const PokemonPage = ({ pokemon }) => {
     const [favorited, setFavorited] = useState(false);
 
     // verificar se já está favoritado percorrendo o array
-    // repetir elementos está causando os erros de referência no console
+    // repetir elementos estão causando os erros de referência no console
     /*function seeFav(){
         if(data !== null){
             const oldData = JSON.parse(data);
