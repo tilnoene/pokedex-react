@@ -13,7 +13,7 @@ body {
 }
 
 main {
-    min-height: 90.7vh;
+    min-height: 88.9vh;
 }
 
 @media screen and (max-width: 400px) {
@@ -24,6 +24,11 @@ main {
 
 @media screen and (max-width: 1333px) {
     main {
-        min-height: 83.7vh;
+        min-height: 80.5vh;
     }
+}
+
+a {
+    color: #333;
+    text-decoration: none;
 }

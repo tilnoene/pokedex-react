@@ -8,7 +8,10 @@ const Home = ({ type }) => {
     return (
         <div>
             <MainMenu />
-            <Pokemons />
+            <div class="home">
+                <Pokemons />
+            </div>
+            <MainMenu />
         </div>
     );
 };

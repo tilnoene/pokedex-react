@@ -17,7 +17,7 @@ function App() {
         <Route path="/" exact>
           <Login />
         </Route>
-        <Route path="/pokemons" exact>
+        <Route path="/pokemon" exact>
           <Home />
         </Route>
         <Route path="/login" exact>
@@ -26,7 +26,7 @@ function App() {
         <Route path="/perfil" exact>
           <Profile />
         </Route>
-        <Route exact path="/pokemons/:name">
+        <Route exact path="/pokemon/:name">
           <PokemonInfo />
         </Route>
       </main>
