@@ -20,11 +20,13 @@ const Profile = () => {
                     </div>
                 </div>}
                 {data !== "null" && 
-                <div className="teste">
+                <div>
                     <div className="container-btn-back">
                         <NavLink to="/pokemon" className="btn" >Voltar</NavLink> 
                     </div>
-                    <PokemonList pokemons={JSON.parse(data)} />
+                    <div className="home">
+                        <PokemonList pokemons={JSON.parse(data)} />
+                    </div>
                 </div>}
             </div>
         </div>
