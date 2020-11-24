@@ -13,3 +13,11 @@
 .btn:hover {
     background:#e6e6e6;  
 }
+
+.red {
+    background: #ff6666;
+}
+
+.red:hover {
+    background:#ff3333;
+}

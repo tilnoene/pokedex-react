@@ -25,7 +25,7 @@ const Profile = () => {
                     <p className="not-pokemon-found">Nenhum pokémon encontrado!</p>
                     <div className="container-btn-back">
                         <NavLink to="/pokemon" className="btn">Voltar</NavLink> 
-                        <NavLink to="/login" className="btn btn-exit" onClick={() => {
+                        <NavLink to="/login" className="btn btn-exit red" onClick={() => {
                             localStorage.setItem("current_username", "null");
                         }}>Sair</NavLink> 
                     </div>
@@ -37,9 +37,9 @@ const Profile = () => {
                     </div>
                     <div className="container-btn-back">
                         <NavLink to="/pokemon" className="btn">Voltar</NavLink> 
-                        <NavLink to="/login" className="btn btn-exit" onClick={() => {
+                        <NavLink to="/login" className="btn btn-exit red" onClick={() => {
                             localStorage.setItem("current_username", "null");
-                        }}>Sair</NavLink> 
+                        }}>Sair</NavLink>
                     </div>
                     <div className="home">
                         <PokemonList pokemons={JSON.parse(data)} />
