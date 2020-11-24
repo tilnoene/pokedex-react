@@ -1,19 +1,27 @@
-import { useEffect, useState } from 'react';
-import PokemonCard from '../PokemonCard';
-import axios from 'axios';
+import React from 'react';
+import { NavLink } from "react-router-dom";
+import PokemonType from '../PokemonType';
+import PokemonInfo from '../../pages/PokemonInfo'
+import {converteID} from '../functions.js';
 
-export default function PokemonList( {pageRef=1} ) {
-    const [pokemons, setPokemons] = useState([]);
-    const [page, setPage] = useState(pageRef);
+import style from './styles.css';
 
-    useEffect(() => {
-        axios
-            .get(`https://pokedex20201.herokuapp.com/pokemons?page=${page}`)
-            .then((response) => response.data)
-            .then((data) => setPokemons(data.data));
-    }, []);
-    
+const PokemonList = ({ pokemons }) => {
     return (
-        <PokemonCard pokemons={pokemons}/>
+      <div className="ContainerPokemonCard">
+        {pokemons.map((pokemon) => (
+        <NavLink to={{ pathname: `/pokemon/${pokemon.name}`, pokemon: pokemon }} key={pokemon.id} className="PokemonCard">
+          <img src={pokemon.image_url}/>
+          <p>{pokemon.name} # {converteID(pokemon.number)}</p>
+          <div className="PokemonCardTypes">
+            {pokemon.kind.split(';').map((type, index) => (
+              <PokemonType key={index} type={type}/>
+            ))}
+          </div>
+        </NavLink>
+      ))}
+      </div>
     );
-}
+};
+
+export default PokemonList;

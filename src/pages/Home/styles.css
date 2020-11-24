@@ -1,3 +1,17 @@
 .home {
     margin: 0 10vw;
 }
+
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10px;
+}
+
+.main-menu p {
+    padding-top: 3px;
+}
+
+.main-menu button {
+    width: 35px;
+}
