@@ -16,13 +16,16 @@ const Profile = () => {
                 <div>
                     <p className="not-pokemon-found">Nenhum pokémon encontrado!</p>
                     <div className="container-btn-back">
-                        <NavLink to="/pokemon" className="btn" >Voltar</NavLink> 
+                        <NavLink to="/pokemon" className="btn">Voltar</NavLink> 
                     </div>
                 </div>}
                 {data !== "null" && 
                 <div>
+                    <div className="container-pokemon-trainer">
+                        <p>Favoritos do treinador <a>{username}</a></p>
+                    </div>
                     <div className="container-btn-back">
-                        <NavLink to="/pokemon" className="btn" >Voltar</NavLink> 
+                        <NavLink to="/pokemon" className="btn">Voltar</NavLink> 
                     </div>
                     <div className="home">
                         <PokemonList pokemons={JSON.parse(data)} />

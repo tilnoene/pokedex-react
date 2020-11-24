@@ -9,3 +9,14 @@
 .not-pokemon-found {
     margin-bottom: 10px;
 }
+
+.container-pokemon-trainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container-pokemon-trainer a {
+    font-weight: bold;
+}
