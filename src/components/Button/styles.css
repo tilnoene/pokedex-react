@@ -7,9 +7,9 @@
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    box-shadow: 0px 0px 3.2px black; /* offset-x | offset-y | blur-radius | color */
 }
 
 .btn:hover {
-    box-shadow: 0px 0px 3px black; /* offset-x | offset-y | blur-radius | color */
     background:#e6e6e6;  
 }
