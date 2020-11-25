@@ -1,5 +1,6 @@
-import React from 'react';
+import { useEffect, useState, React } from 'react';
 import { useLocation, useRouteMatch, useParams, useHistory } from "react-router-dom";
+import axios from 'axios';
 
 import PokemonPage from '../../components/PokemonPage';
 import PokemonError from '../../components/PokemonError';
@@ -7,6 +8,8 @@ import PokemonError from '../../components/PokemonError';
 import './styles.css';
 
 const PokemonInfo = () => {
+    const [pokemons, setPokemons] = useState([]);
+
     const history = useHistory();
     const location = useLocation();
     const match = useRouteMatch(useHistory());
@@ -14,20 +17,29 @@ const PokemonInfo = () => {
     var { name } = useParams();
     var info = location.pokemon;
 
-    if(info === undefined){ // procura os dados do pokémon na API props == undefined
-        // recebe a API completa e faz dois for aninhado
-        // até encontrar um com o name == name.lower()
-        // se não, retorna um erro
-        //info = "batata";
+    function loadPokemons( page ) {
+        axios
+            .get(`https://pokedex20201.herokuapp.com/pokemons`)
+            .then((response) => response.data)
+            .then((data) => setPokemons(data.data));
+    }
 
-        return (
-            <PokemonError name={name}/>
-        );
+    if(info === undefined){ 
+        axios
+            .get(`https://pokedex20201.herokuapp.com/pokemons/${name}`)
+            .then((response) => setPokemons(response.data))
+            .catch((error) => {
+                alert('ERRO! Reinicie a página.');
+            });
 
+        info = pokemons;
     }
 
     return (
-        <PokemonPage pokemon={info} />
+        <div>     
+            {(info === null || info.length === 0) && <PokemonError name={name}/> }
+            {info !== null && info.length !== 0 && <PokemonPage pokemon={info} /> }
+        </div>
     );
 };
 
